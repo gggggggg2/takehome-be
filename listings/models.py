@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Listings(models.Model):
-    bathrooms = models.FloatField()
+    bathrooms = models.IntegerField()
     bedrooms = models.IntegerField()
     home_size = models.IntegerField()
     home_type = models.TextField()
@@ -26,7 +26,5 @@ class Listings(models.Model):
     zipcode = models.TextField()
 
     class Meta:
+        managed = False
         db_table = "listings"
-        constraints = [
-            models.UniqueConstraint(fields=["zillow_id"], name="unique_zillow_id")
-        ]

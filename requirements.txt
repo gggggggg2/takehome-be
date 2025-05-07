@@ -1,2 +1,9 @@
 django >= 3.2, < 3.3
 djangorestframework >= 3.12, < 3.13
+legacy-cgi
+psycopg2
+django-postgres-extra
+
+
+
+
